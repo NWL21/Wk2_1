@@ -1,15 +1,16 @@
 class bottle:
-    def __init__(bottle, material, volume, insulation):
+    def __init__(bottle, material, volume, insulation, name):
         bottle.material = material
         bottle.volume = volume
         bottle.insulation = insulation
+        bottle.name = name
 
-        def IsInsulated(bottle):
-            if bottle.insulation == 1:
-                print("The bottle is insulated.")
-            else:
-                print("The bottle is not insulated")
+    def IsInsulated(bot):
+        if bot.insulation:
+            print(bot.name + " is insulated.")
+        else:
+            print(bot.name + " is not insulated")
 
 
-mybottle = bottle("metal", 500, 1)
+mybottle = bottle("metal", 500, True, "mybottle")
 bottle.IsInsulated(mybottle)
