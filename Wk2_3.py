@@ -37,7 +37,9 @@ def calc_median_temperature(list):
         print("2")
         return sortedlist[int(i - 0.5)]
 def main():
-    print("ET7035 DevOps")
+    a = 2
+    print(f"hi {a} ppl")
+    print(hex(11))
     display_main_menu()
     num_list = get_user_input()
     minmax = calc_min_max_temperature(num_list)
