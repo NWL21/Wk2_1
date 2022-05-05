@@ -1,8 +1,9 @@
 def display_main_menu():
     print("Enter some numbers seperated by commas : ")
-def get_user_input():
+def get_user_input(tempbuffer):
     n = 0
-    tempbuffer = str(input())
+    if tempbuffer == '\0':
+        tempbuffer = str(input())
     nums = tempbuffer.split(",")
     for number in nums:
         nums[n] = float(number)
@@ -41,7 +42,7 @@ def main():
     print(f"hi {a} ppl")
     print(hex(11))
     display_main_menu()
-    num_list = get_user_input()
+    num_list = get_user_input('\0')
     minmax = calc_min_max_temperature(num_list)
     print(str(num_list))
     print(str(type(num_list[0])))
